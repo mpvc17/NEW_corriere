@@ -1,0 +1,25 @@
+# macOS / editor
+.DS_Store
+.vscode/
+
+# Node / build
+node_modules/
+dist/
+build/
+
+# PHP / Composer
+/vendor/
+composer.lock
+
+# WordPress
+wp-content/uploads/
+wp-content/cache/
+wp-content/ai1wm-backups/
+wp-content/updraft/
+wp-content/ewww/
+wp-content/litespeed/
+wp-content/debug.log
+
+# Log e temporanei
+*.log
+*.tmp
