@@ -64,6 +64,18 @@
         // silenzioso
       }
     }
-    fetchWeather();
-  })();
+      fetchWeather();
+    
+      // ====== Offcanvas Menu ======
+      const toggle = document.querySelector('.cdt-menu-toggle');
+      const offcanvas = document.getElementById('cdt-offcanvas');
+      if (toggle && offcanvas) {
+        toggle.addEventListener('click', () => {
+          const open = offcanvas.classList.toggle('is-open');
+          toggle.setAttribute('aria-expanded', open);
+          if (open) offcanvas.removeAttribute('hidden');
+          else offcanvas.setAttribute('hidden', '');
+        });
+      }
+    })();
   
