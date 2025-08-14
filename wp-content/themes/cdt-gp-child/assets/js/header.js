@@ -41,7 +41,7 @@
   
     // ====== Meteo Taranto (Open-Meteo, no API key) ======
     const wEl = document.getElementById('cdt-weather');
-    const WMO = {
+    const WMO_DESC = {
       0:'Sereno',1:'Per lo più sereno',2:'Parzialmente nuvoloso',3:'Nuvoloso',
       45:'Nebbia',48:'Nebbia brinosa',
       51:'Pioviggine leggera',53:'Pioviggine moderata',55:'Pioviggine intensa',
@@ -49,6 +49,15 @@
       71:'Neve leggera',73:'Neve moderata',75:'Neve intensa',
       80:'Rovesci leggeri',81:'Rovesci moderati',82:'Rovesci forti',
       95:'Temporale',96:'Temporale con grandine',99:'Temporale con grandine forte'
+    };
+    const WMO_ICON = {
+      0:'☀️',1:'🌤️',2:'⛅',3:'☁️',
+      45:'🌫️',48:'🌫️',
+      51:'🌦️',53:'🌦️',55:'🌦️',
+      61:'🌧️',63:'🌧️',65:'🌧️',
+      71:'🌨️',73:'🌨️',75:'🌨️',
+      80:'🌧️',81:'🌧️',82:'🌧️',
+      95:'⛈️',96:'⛈️',99:'⛈️'
     };
     async function fetchWeather(){
       try{
@@ -58,8 +67,12 @@
         const j = await r.json();
         const t = Math.round(j?.current?.temperature_2m);
         const code = j?.current?.weather_code;
-        const desc = WMO[code] || 'Meteo';
-        if (wEl && Number.isFinite(t)) wEl.textContent = `Taranto: ${t}° · ${desc}`;
+        const desc = WMO_DESC[code] || 'Meteo';
+        const icon = WMO_ICON[code] || '';
+        if (wEl && Number.isFinite(t)) {
+          wEl.textContent = `Taranto: ${t}° ${icon}`;
+          wEl.setAttribute('aria-label', `Taranto: ${t}° ${desc}`);
+        }
       } catch(e){
         // silenzioso
       }
