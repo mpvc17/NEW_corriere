@@ -1,0 +1,13 @@
+/*
+ Theme Name: CDT News (GeneratePress Child)
+ Template: generatepress
+ Text Domain: cdt-news
+ Version: 0.1.0
+*/
+:root{ --wrap:1200px; }
+.wrap{ max-width:var(--wrap); margin-inline:auto; padding-inline:16px; }
+.cdt-grid{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
+@media (max-width:1024px){ .cdt-grid{ grid-template-columns:repeat(3,1fr); } }
+@media (max-width:768px){ .cdt-grid{ grid-template-columns:repeat(2,1fr); } }
+.cdt-card__title{ font-size:1rem; line-height:1.25; margin:.5rem 0; }
+.cdt-card__meta{ font-size:.875rem; color:#6b7280; }

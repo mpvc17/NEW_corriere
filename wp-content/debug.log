@@ -1,0 +1,10 @@
+[14-Aug-2025 10:59:53 UTC] PHP Parse error:  syntax error, unexpected token ")" in /var/www/html/wp-content/themes/cdt-theme/inc/enqueue.php on line 18
+[14-Aug-2025 10:59:53 UTC] PHP Notice:  La funzione _load_textdomain_just_in_time è stata richiamata <strong>in maniera scorretta</strong>. Il caricamento della traduzione per il dominio <code>cdt</code> è stato attivato troppo presto. Di solito è un indicatore di un codice nel plugin o nel tema eseguito troppo presto. Le traduzioni dovrebbero essere caricate all'azione <code>init</code> o in un secondo momento. Leggi <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> per maggiori informazioni. (Questo messaggio è stato aggiunto nella versione 6.7.0.) in /var/www/html/wp-includes/functions.php on line 6121
+[14-Aug-2025 10:59:53 UTC] PHP Warning:  Trying to access array offset on false in /var/www/html/wp-includes/class-wp-recovery-mode-email-service.php on line 367
+[14-Aug-2025 10:59:53 UTC] PHP Warning:  Trying to access array offset on false in /var/www/html/wp-includes/class-wp-recovery-mode-email-service.php on line 368
+[14-Aug-2025 11:00:39 UTC] PHP Parse error:  syntax error, unexpected token ")" in /var/www/html/wp-content/themes/cdt-theme/inc/enqueue.php on line 18
+[14-Aug-2025 11:00:42 UTC] PHP Parse error:  syntax error, unexpected token ")" in /var/www/html/wp-content/themes/cdt-theme/inc/enqueue.php on line 18
+[14-Aug-2025 11:00:43 UTC] PHP Parse error:  syntax error, unexpected token ")" in /var/www/html/wp-content/themes/cdt-theme/inc/enqueue.php on line 18
+[14-Aug-2025 11:00:45 UTC] PHP Parse error:  syntax error, unexpected token ")" in /var/www/html/wp-content/themes/cdt-theme/inc/enqueue.php on line 18
+[14-Aug-2025 11:04:10 UTC] PHP Warning:  Attempt to read property "title" on null in /var/www/html/wp-includes/class-wp-customize-widgets.php on line 926
+[14-Aug-2025 11:04:44 UTC] PHP Warning:  Attempt to read property "title" on null in /var/www/html/wp-includes/class-wp-customize-widgets.php on line 926
