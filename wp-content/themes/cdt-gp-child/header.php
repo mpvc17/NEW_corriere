@@ -36,12 +36,12 @@ if (!defined('ABSPATH')) exit;
           else echo '<a class="site-title" href="'.esc_url(home_url('/')).'">'.esc_html(get_bloginfo('name')).'</a>';
         ?>
       </div>
+      <button class="cdt-menu-toggle" aria-controls="cdt-offcanvas" aria-expanded="false" aria-label="Menu">☰</button>
     </div>
   </div>
 
-  <!-- 3) NAV BAR -->
-  <nav class="cdt-navbar" role="navigation" aria-label="<?php esc_attr_e('Primary', 'cdt-news'); ?>">
-    <div class="wrap">
+  <div id="cdt-offcanvas" class="cdt-offcanvas" hidden>
+    <div class="cdt-offcanvas__inner">
       <?php
       wp_nav_menu([
         'theme_location' => 'primary',
@@ -51,7 +51,7 @@ if (!defined('ABSPATH')) exit;
       ]);
       ?>
     </div>
-  </nav>
+  </div>
 
   <!-- 4) TICKER BAR -->
   <div class="cdt-tickerbar" role="region" aria-label="Ultime dalla sezione Striscia">
